@@ -1,16 +1,25 @@
 import styled from 'styled-components';
 
 const DialogComponent = styled.div`
-        position: absolute;
-        inset: 0;
-        z-index: 2;    
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: ${({ theme }) => theme.palette.popUpBackground};
+        position: absolute;
+        inset: 0;
+
+        .backdrop {
+            position: absolute;
+            inset: 0;
+            z-index: 2;    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: ${({ theme }) => theme.palette.popUpBackground};
+        }
 
     .dialog {
         display: flex;

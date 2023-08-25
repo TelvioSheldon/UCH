@@ -9,7 +9,7 @@ export interface DialogProps {
     confirmFn: () => void;
     cancelFn: () => void;
     content: { title: string; description: string };
-    isDismissible: boolean; // If true, the dialog can be dismissible without user interaction
+    isOpen: boolean;
 }
 
 Logger.warn('UI', 'TODO: Pass contextIcon as enum');
