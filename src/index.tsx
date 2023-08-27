@@ -5,9 +5,8 @@ import App from './App';
 import { ThemeProvider } from 'styled-components';
 import { themeProvider } from './UI/ThemeProvider/LightTheme';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+export const rootContainer = document.getElementById('root') as HTMLElement;
+const root = ReactDOM.createRoot(rootContainer);
 root.render(
     <React.StrictMode>
         <ThemeProvider theme={themeProvider}>
