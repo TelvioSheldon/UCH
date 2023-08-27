@@ -1,14 +1,16 @@
+import { ReactNode } from 'react';
 import Logger from '../../../Utils/Logger';
 
 export interface DialogProps {
     contextIcon?: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
         title?: string | undefined;
     }>; // An icon to be shown in order to indicate context(warn, error, success, etc)
-    confirmText: string;
-    cancelText: string;
-    confirmFn: () => void;
-    cancelFn: () => void;
-    content: { title: string; description: string };
+    primaryActionLabel: string;
+    secondaryActionLabel: string;
+    primaryActionFn: () => void;
+    secondaryActionFn: () => void;
+    onCloseFn: () => void;
+    content: { title: string; children: ReactNode };
     isOpen: boolean;
 }
 

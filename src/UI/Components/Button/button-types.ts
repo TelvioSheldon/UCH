@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { ColorFromTheme } from '../../../shared/shared-types';
 
 export interface ButtonProps {
-    mode: ButtonModesKeys;
+    mode?: ButtonModesKeys;
     actionFn: () => void;
     children: ReactNode;
     id?: string; //* For future QA usage

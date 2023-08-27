@@ -9,6 +9,10 @@ const AppWrapperScreen = styled.div`
 
     .page-content {
         flex: 1 1 auto;
+
+        h3 {
+            text-align: center;
+        }
     }
 
     .footer {

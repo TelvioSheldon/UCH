@@ -40,6 +40,6 @@
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         "comma-dangle": ["error", "never"],
-        "max-len": ["error", { "comments": 100, "code": 110 }]
+        "max-len": ["error", { "comments": 100, "code": 126 }]
     }
 }
