@@ -6,17 +6,23 @@ const AppWrapperScreen = styled.div`
     padding: 10px 24px;
     height: 100%;
     width: 100%;
+    gap: 12px;
 
-    .page-content {
+
+    .page-wrapper {
+        height: 0%;
+        display: flex;
+        flex-direction: column;
         flex: 1 1 auto;
+    }
 
-        h3 {
-            text-align: center;
-        }
+    .page__title {
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     .footer {
-
+        
     }
 
 `;
