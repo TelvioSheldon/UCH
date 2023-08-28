@@ -19,7 +19,7 @@ export const useDialog = () => { // TODO: Refactor this to render all sort of po
         secondaryActionLabel: '',
         secondaryActionFn: () => { return; },
         primaryActionFn: () => { return; },
-        content: { title: '', children: '' },
+        content: { title: '', description: '' },
         contextIcon: undefined
     });
 

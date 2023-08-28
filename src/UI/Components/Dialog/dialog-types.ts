@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import Logger from '../../../Utils/Logger';
 
 export interface DialogProps {
@@ -10,7 +9,7 @@ export interface DialogProps {
     primaryActionFn: () => void;
     secondaryActionFn: () => void;
     onCloseFn: () => void;
-    content: { title: string; children: ReactNode };
+    content: { title: string; description: string };
     isOpen: boolean;
 }
 

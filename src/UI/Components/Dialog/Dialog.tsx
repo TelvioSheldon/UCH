@@ -20,7 +20,7 @@ function Dialog(props: DialogProps) {
                             <div className="dialog-content">
                                 <span className='dialog-content__title'>{props.content.title}</span>
                                 <span className='dialog-content__description'>
-                                    {props.content.children}
+                                    {props.content.description}
                                 </span>
                             </div>
                             <div className='dialog-actions'>
