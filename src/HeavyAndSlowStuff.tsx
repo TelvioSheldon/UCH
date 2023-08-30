@@ -1,4 +1,4 @@
-import { LOGGER_TAGS } from './Utils/Constants';
+import { LOGGER_TAGS } from './shared/shared-enums';
 import Logger from './Utils/Logger';
 
 function HeavyAndSlowStuff({ list }: {list: string[]}) {

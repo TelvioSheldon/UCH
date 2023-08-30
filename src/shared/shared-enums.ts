@@ -3,3 +3,9 @@ export enum AppEnvironmentsEnum {
     STAGING = 'UAT',
     PRODUCTION = 'PROD'
 }
+
+export enum LOGGER_TAGS {
+    APP = 'HOST',
+    DIALOG = 'DIALOG',
+    HEAVY_COMPONENT = 'HEAVY_COMPONENT'
+}
