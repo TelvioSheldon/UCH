@@ -1,7 +1,8 @@
 import HeavyAndSlowStuff from './HeavyAndSlowStuff';
+import { LOGGER_TAGS } from './shared/shared-enums';
+import { DUMMY_LIST_LENGTH } from './shared/sharred-constants';
 import TriggerModal from './TriggerModal';
 import AppWrapper from './UI/Components/AppWrapper/AppWrapper';
-import { DUMMY_LIST_LENGTH, LOGGER_TAGS } from './Utils/Constants';
 import Logger from './Utils/Logger';
 import Utils from './Utils/Utils';
 
@@ -14,7 +15,7 @@ function App() {
         <>
             <AppWrapper>
                 <div className="page-wrapper">
-                    <h3 className='page__title'>Host component rendering heavy components</h3>
+                    <h3 className='page__title'>Host component</h3>
                     <HeavyAndSlowStuff list={listItems} />
                 </div>
                 <div className="footer">
