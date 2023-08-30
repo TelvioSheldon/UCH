@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { LOGGER_TAGS } from './Utils/Constants';
+import Logger from './Utils/Logger';
 
 function HeavyAndSlowStuff({ list }: {list: string[]}) {
+    Logger.log(LOGGER_TAGS.HEAVY_COMPONENT, 'Re-render occurred');
 
-    const [listItems] = useState(list);
     return (
         <div style={{ overflow: 'scroll', display: 'flex', flexWrap: 'wrap' }}>
             {list.map((item, index) => (
                 <span key={`${item}${index}`}>
                     {item}
                 </span>
-            ))}
-            
+            ))}   
         </div>
     );
 }

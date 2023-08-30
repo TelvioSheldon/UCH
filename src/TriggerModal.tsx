@@ -12,7 +12,7 @@ function TriggerModal() {
             contextIcon: PopUpError,
             primaryActionLabel: 'Cancel',
             secondaryActionLabel: 'Confirm',
-            secondaryActionFn: () => { Logger.log('UI', 'Dialog primary action\'s dispatched'); close(); },
+            secondaryActionFn: () => { Logger.log('UI', 'Dialog secondary action\'s dispatched'); close(); },
             primaryActionFn: close,
             content: {
                 title: 'Beware of unnecessary renders',

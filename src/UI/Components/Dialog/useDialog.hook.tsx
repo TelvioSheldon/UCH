@@ -4,17 +4,10 @@ import { rootContainer } from '../../..';
 import Dialog from './Dialog';
 import { DialogProps } from './dialog-types';
 
-export const useDialog = () => { // TODO: Refactor this to render all sort of pop ups depending on a "type" argument
+export const useDialog = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [{
-        primaryActionLabel,
-        secondaryActionLabel,
-        secondaryActionFn,
-        primaryActionFn,
-        content,
-        contextIcon
-    }, setDialogProps] = useState<Omit<DialogProps, 'isOpen' | 'onCloseFn'>>({
+    const [dialogProps, setDialogProps] = useState<Omit<DialogProps, 'isOpen' | 'onCloseFn'>>({
         primaryActionLabel: '',
         secondaryActionLabel: '',
         secondaryActionFn: () => { return; },
@@ -24,25 +17,9 @@ export const useDialog = () => { // TODO: Refactor this to render all sort of po
     });
 
     const close = () => setIsOpen(false);
+    const open = () => setIsOpen(true);
 
-
-    const DialogModal = () => (
-        createPortal(<Dialog
-            primaryActionLabel={primaryActionLabel}
-            secondaryActionLabel={secondaryActionLabel}
-            secondaryActionFn={secondaryActionFn}
-            primaryActionFn={primaryActionFn}
-            isOpen={isOpen}
-            content={content}
-            onCloseFn={close}
-            contextIcon={contextIcon}
-        />, rootContainer)
-    );
-
-    const open = () => {
-        setIsOpen(true);
-    };
-    
+    const DialogModal = () => createPortal(<Dialog {...{...dialogProps, isOpen, onCloseFn: close}} />, rootContainer);
 
     return { open, close, setDialogProps, DialogModal };
 };

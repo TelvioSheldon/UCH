@@ -33,7 +33,7 @@ const DialogComponent = styled.div`
         border-radius: 3%;
         z-index: 3;
 
-        .dialog--close-icon {
+        .dialog__close-icon {
             align-self: flex-end;
             padding: 14px 14px 0 0;
             cursor: pointer;

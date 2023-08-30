@@ -12,7 +12,7 @@ function Dialog(props: DialogProps) {
                 ? <DialogComponent>
                     <div className="backdrop" onClick={props.onCloseFn} />
                     <div className='dialog'>
-                        <div className='dialog--close-icon' onClick={props.onCloseFn}>
+                        <div className='dialog__close-icon' onClick={props.onCloseFn}>
                             <CloseDialogIcon />
                         </div>
                         <div className="dialog-body">
@@ -32,8 +32,7 @@ function Dialog(props: DialogProps) {
                 </DialogComponent>
                 : null
             }
-        </>
-        
+        </>     
     );
 }
 
