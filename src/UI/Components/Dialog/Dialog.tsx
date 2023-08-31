@@ -25,7 +25,7 @@ function Dialog(props: DialogProps) {
                             </div>
                             <div className='dialog-actions'>
                                 <Button mode='CANCEL' actionFn={props.primaryActionFn}>{props.primaryActionLabel}</Button>
-                                <Button mode='NORMAL' actionFn={props.secondaryActionFn}>{props.secondaryActionLabel}</Button>
+                                <Button actionFn={props.secondaryActionFn}>{props.secondaryActionLabel}</Button>
                             </div>
                         </div>
                     </div>

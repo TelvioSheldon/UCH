@@ -8,9 +8,7 @@ import { themeProvider } from './UI/ThemeProvider/LightTheme';
 export const rootContainer = document.getElementById('root') as HTMLElement;
 const root = ReactDOM.createRoot(rootContainer);
 root.render(
-    <React.StrictMode>
-        <ThemeProvider theme={themeProvider}>
-            <App />
-        </ThemeProvider>
-    </React.StrictMode>
+    <ThemeProvider theme={themeProvider}>
+        <App />
+    </ThemeProvider>
 );

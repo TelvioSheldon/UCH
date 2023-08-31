@@ -7,5 +7,5 @@ export enum AppEnvironmentsEnum {
 export enum LOGGER_TAGS {
     APP = 'HOST',
     DIALOG = 'DIALOG',
-    HEAVY_COMPONENT = 'HEAVY_COMPONENT'
+    HEAVY_COMPONENT = 'HOST_CHILD'
 }
