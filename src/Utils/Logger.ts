@@ -1,4 +1,3 @@
-import { AppEnvironmentsEnum } from './../shared/shared-enums';
 /* eslint-disable no-console */
 
 enum LOG_LEVELS {
@@ -10,17 +9,7 @@ enum LOG_LEVELS {
 }
 abstract class Logger {
 
-    private static _logLevel: LOG_LEVELS = Logger.defineLogLevel();
-
-    private static defineLogLevel(): LOG_LEVELS {
-        switch(process.env.REACT_APP_ENVIRONMENT as AppEnvironmentsEnum) {
-        case AppEnvironmentsEnum.DEV:
-            return LOG_LEVELS.FULL_LOGS;
-        case AppEnvironmentsEnum.STAGING:
-            return LOG_LEVELS.LOGS_AND_DEBUG_INFO;
-        default: return LOG_LEVELS.NO_LOGGING;
-        }
-    }
+    private static _logLevel: LOG_LEVELS = LOG_LEVELS.FULL_LOGS;
 
     static log(from: string, message: string, data?: any) {
         if (Logger._logLevel >= LOG_LEVELS.ERRORS__WARNINGS_AND_GENERAL_LOGS) {
